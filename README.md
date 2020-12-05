@@ -21,10 +21,18 @@ Tokenization and cleaning codes will be provided very soon
 
 Graph data will be uploaded to Google Drive with open access in order to repeat the experimental results. Link will be provides here very soon. The python scripts for generating graph data has been included in the source codes.
 
+## Config files
+
+For quickly repeat our experiments results, the config files will also be 
+
+To simply run the codes, you should 
+
+`cd codes`
+`python train.py conf/config.py` which is same as [Neural classifier](https://github.com/MemoriesJ/NeuralNLP-NeuralClassifier/blob/master/README.md)
 
 ## Acknowledgement
 
-Our codes are developed based on [Neural classifier](https://github.com/MemoriesJ/NeuralNLP-NeuralClassifier/blob/master/README.md)
+Our codes are based on [Neural classifier](https://github.com/MemoriesJ/NeuralNLP-NeuralClassifier/blob/master/README.md)
 we have modified following files which will be different from originals
 
 * model/rnn.py                           (update)
