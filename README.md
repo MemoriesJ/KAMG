@@ -33,7 +33,7 @@ For quickly repeat our experiments results, the config files will also be
 To simply run the codes, you should 
 
 ```
-cd codes
+cd NeuralNLP-NeuralClassifier-KAMG
 python train.py conf/config.py
 ```
 
