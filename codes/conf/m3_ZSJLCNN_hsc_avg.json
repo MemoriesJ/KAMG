@@ -1,0 +1,142 @@
+{
+  "task_info": {
+    "label_type": "multi_label",
+    "hierarchical": false,
+    "hierar_taxonomy": "data/mimic.taxonomy",
+    "hierar_penalty": 0.000001,
+    "zsl": true
+  },
+  "device": "cuda",
+  "model_name": "ZSJLCNN",
+  "checkpoint_dir": "checkpoint_dir/mimic3/ZSJLCNN_hsc_avg",
+  "model_dir": "trained_model_dir/mimic3/ZSJLCNN_hsc_avg",
+  "data": {
+    "train_json_files": [
+      "data/mimic3_train.json"
+    ],
+    "validate_json_files": [
+      "data/mimic3_dev.json"
+    ],
+    "test_json_files": [
+      "data/mimic3_test.json"
+    ],
+    "generate_dict_using_json_files": true,
+    "generate_dict_using_all_json_files": true,
+    "generate_dict_using_pretrained_embedding": false,
+    "dict_dir": "dict_mimic3/ZSJLCNN_hsc_avg",
+    "num_worker": 4,
+    "label_token_file": "data/mimic_label_token.json",
+    "generate_label_group": true,
+    "label_group_threshold": 5,
+    "label_groups": {
+      "frequent": "freq",
+      "few": "few",
+      "zero": "zero"
+    },
+    "label_relation_candidate_files": {
+      "hierarchy": "data/mimic3_hierarchy_graph.npz",
+      "similarity": "data/mimic3_similarity_graph.npz",
+      "cooccurrence": "data/mimic3_cooccurrence_graph.npz"
+    },
+    "label_relation_files": ["hierarchy", "similarity", "cooccurrence"],
+    "label_map_of_relation_files": "data/mimic3_label_map_preorder.dict"
+  },
+  "feature": {
+    "feature_names": [
+      "token"
+    ],
+    "min_token_count": 3,
+    "min_char_count": 2,
+    "token_ngram": 0,
+    "min_token_ngram_count": 0,
+    "min_keyword_count": 0,
+    "min_topic_count": 2,
+    "max_token_dict_size": 1000000,
+    "max_char_dict_size": 150000,
+    "max_token_ngram_dict_size": 10000000,
+    "max_keyword_dict_size": 100,
+    "max_topic_dict_size": 100,
+    "max_token_len": 2500,
+    "max_char_len": 0,
+    "max_char_len_per_token": 0,
+    "token_pretrained_file": "data/biowv.200d.txt",
+    "keyword_pretrained_file": "",
+    "label_embedding_pretrained_file": "data/mimic3_label_avg_embedding.txt"
+  },
+  "train": {
+    "batch_size": 32,
+    "start_epoch": 1,
+    "num_epochs": 15,
+    "num_epochs_static_embedding": 0,
+    "decay_steps": 1000,
+    "decay_rate": 1.0,
+    "clip_gradients": 100.0,
+    "l2_lambda": 0.0,
+    "loss_type": "BCEWithLogitsLoss",
+    "sampler": "fixed",
+    "num_sampled": 5,
+    "visible_device_list": "0",
+    "hidden_layer_dropout": 0.0
+  },
+  "eval": {
+    "text_file": "data/mimic3_test.json",
+    "threshold": 0.5,
+    "dir": "eval_dir/mimic3/ZSJLCNN_hsc_avg",
+    "batch_size": 64,
+    "is_flat": true,
+    "top_k": 10,
+    "model_dir": "checkpoint_dir/mimic3/hsc_avg/ZSJLCNN_best",
+    "debug_file_name": "mimic3_ZSJLCNN_hsc_avg_probs.txt",
+    "instance_remove": false
+  },
+  "embedding": {
+    "type": "embedding",
+    "dimension": 200,
+    "region_embedding_type": "context_word",
+    "region_size": 5,
+    "initializer": "uniform",
+    "fan_mode": "FAN_IN",
+    "uniform_bound": 0.25,
+    "random_stddev": 0.01,
+    "dropout": 0.2,
+    "trainable": true
+  },
+  "label_embedding": {
+    "use_label_embedding": true,
+    "type": "embedding",
+    "dimension": 200,
+    "initializer": "uniform",
+    "fan_mode": "FAN_IN",
+    "uniform_bound": 0.25,
+    "random_stddev": 0.01,
+    "dropout": 0.0,
+    "trainable": false
+  },
+  "optimizer": {
+    "optimizer_type": "Adam",
+    "learning_rate": 0.001,
+    "decay_rate": 0,
+    "adadelta_decay_rate": 0.95,
+    "adadelta_epsilon": 1e-08
+  },
+  "ZSJLCNN": {
+    "num_kernels": 200,
+    "kernel_size": 10,
+    "store_attention_score": false,
+    "gcn_in_features": 200,
+    "gcn_hidden_features": 200,
+    "gcn_out_features": 200,
+    "gcn_dropout": 0
+  },
+  "fusion": {
+    "fusion_type": "concatenation",
+    "in_features": 600,
+    "out_features": 200,
+    "bias": false
+  },
+  "log": {
+    "logger_file_dir": "log_dir/mimic3",
+    "logger_file": "log_test_ZSJLCNN_hsc_avg_ZSJLCNN",
+    "log_level": "warn"
+  }
+}
