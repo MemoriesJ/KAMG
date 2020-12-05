@@ -1,4 +1,6 @@
-# Multi-label Few/Zero-shot Learning with Knowledge Aggregated from Multiple Label Graphs
+# KAMG
+
+Code repository for EMNLP 2020 proceedings paper [Multi-label Few/Zero-shot Learning with Knowledge Aggregated from Multiple Label Graphs](https://arxiv.org/abs/2010.07459).
 
 
 ## Introduction 
@@ -9,8 +11,8 @@ To use our codes, please make sure that you have read the README file from [Neur
 
 ## Support text encoders
 
-ZSJLCNN - ACNN + KAMG in paper
-ZLWACNN - Rios' (2018) model
+* ZSJLCNN - [ACNN + KAMG in our paper](https://arxiv.org/abs/2010.07459)
+* ZLWACNN - [Rios (2018) model]()
 
 other encoders for conventional text classification task are mentioned in [Neural classifier](https://github.com/MemoriesJ/NeuralNLP-NeuralClassifier/blob/master/README.md)
 
@@ -27,8 +29,12 @@ For quickly repeat our experiments results, the config files will also be
 
 To simply run the codes, you should 
 
-`cd codes`
-`python train.py conf/config.py` which is same as [Neural classifier](https://github.com/MemoriesJ/NeuralNLP-NeuralClassifier/blob/master/README.md)
+```
+cd codes
+python train.py conf/config.py
+```
+
+which is same as [Neural classifier](https://github.com/MemoriesJ/NeuralNLP-NeuralClassifier/blob/master/README.md)
 
 ## Acknowledgement
 
