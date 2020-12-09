@@ -42,7 +42,7 @@ which is same as [Neural classifier](https://github.com/Tencent/NeuralNLP-Neural
 ## Acknowledgement
 
 Our codes are based on [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier), and
-we have modified following files which will be different the from original.
+we have modified following files which will be different from the original.
 
 * model/rnn.py                           (update)
 * model/zlwacnn.py                       (add)
