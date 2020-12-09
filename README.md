@@ -12,7 +12,7 @@ To use our codes, please make sure that you have read the README file from [Neur
 ## Support text encoders
 
 * ZSJLCNN - [ACNN + KAMG in our paper](https://www.aclweb.org/anthology/2020.emnlp-main.235/)
-* ZLWACNN - [Rios & Kavuluru (2018) model](https://www.aclweb.org/anthology/D18-1352/)
+* ZAGCNN - [Rios & Kavuluru's (2018) model](https://www.aclweb.org/anthology/D18-1352/)
 
 Other encoders for conventional text classification task are mentioned in [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier)
 
@@ -28,7 +28,7 @@ Graph data will be uploaded to Google Drive with open access in order to repeat 
 
 ## Config files
 
-For quickly repeat our experiments results, the config files will also be 
+For quickly repeat our experiments results, the config files will also be available soon from this repository.
 
 To simply run the codes, you should 
 
@@ -42,7 +42,7 @@ which is same as [Neural classifier](https://github.com/Tencent/NeuralNLP-Neural
 ## Acknowledgement
 
 Our codes are based on [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier)
-we have modified following files which will be different from originals
+we have modified following files which will be different the from original.
 
 * model/rnn.py                           (update)
 * model/zlwacnn.py                       (add)
