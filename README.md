@@ -25,7 +25,7 @@ Tokenization and cleaning codes will be provided very soon
 EU legislation dataset could be download from [Chalkidis et al. (2019)](https://github.com/iliaschalkidis/lmtc-eurlex57k)
 but the codes for running the experiments of EU legislation dataset are developed based on their original codes, so not included here.
 
-Graph data will be uploaded to Google Drive with open access in order to repeat the experimental results. Link will be provides here very soon. The python scripts for generating graph data has been included in the source codes.
+Graph data will be uploaded to Google Drive with open access in order to repeat the experimental results. The Google Drive link will be given here very soon. The python scripts for generating graph data has been included in the source codes.
 
 ## Config files
 
