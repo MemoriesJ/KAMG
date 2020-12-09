@@ -1,6 +1,6 @@
 # KAMG
 
-Code repository for EMNLP 2020 proceedings paper [Multi-label Few/Zero-shot Learning with Knowledge Aggregated from Multiple Label Graphs](https://arxiv.org/abs/2010.07459).
+Code repository for EMNLP 2020 proceedings paper [Multi-label Few/Zero-shot Learning with Knowledge Aggregated from Multiple Label Graphs](https://www.aclweb.org/anthology/2020.emnlp-main.235/).
 
 
 ## Introduction 
@@ -11,7 +11,7 @@ To use our codes, please make sure that you have read the README file from [Neur
 
 ## Support text encoders
 
-* ZSJLCNN - [ACNN + KAMG in our paper](https://arxiv.org/abs/2010.07459)
+* ZSJLCNN - [ACNN + KAMG in our paper](https://www.aclweb.org/anthology/2020.emnlp-main.235/)
 * ZLWACNN - [Rios & Kavuluru (2018) model](https://www.aclweb.org/anthology/D18-1352/)
 
 Other encoders for conventional text classification task are mentioned in [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier)
