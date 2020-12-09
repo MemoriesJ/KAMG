@@ -15,7 +15,7 @@ To use our codes, please make sure that you have read the README file from [Neur
 * ZSJLCNN - [ACNN + KAMG in our paper](https://www.aclweb.org/anthology/2020.emnlp-main.235/)
 * ZAGCNN - [Rios & Kavuluru's (2018) model](https://www.aclweb.org/anthology/D18-1352/)
 
-Other encoders for conventional text classification task are mentioned in [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier)
+Other encoders for conventional text classification task are mentioned in [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier).
 
 ## Dataset
 
