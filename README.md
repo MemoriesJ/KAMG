@@ -6,7 +6,7 @@ Code repository for EMNLP 2020 proceedings paper [Multi-label Few/Zero-shot Lear
 ## Introduction 
 
 We intorduce the knowledge aggregation mechanism to improve the few/zero-shot learning performance on MIMIC-II/III datasets as well as the EU legislation dataset.
-We extend [Rios & Kavuluru, 2018](https://www.aclweb.org/anthology/D18-1352/) work with the implementation from Neural classifier ([Liu et al., 2019](https://github.com/Tencent/NeuralNLP-NeuralClassifier))
+We extend [Rios & Kavuluru's, (2018)](https://www.aclweb.org/anthology/D18-1352/) work with the implementation from Neural classifier ([Liu et al., 2019](https://github.com/Tencent/NeuralNLP-NeuralClassifier))
 To use our codes, please make sure that you have read the README file from [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier).
 
 ## Support text encoders
@@ -21,7 +21,7 @@ Other encoders for conventional text classification task are mentioned in [Neura
 Due to the limit access to MIMIC dataset, you need to follow the instruction on the [web page](https://mimic.physionet.org/gettingstarted/access/) to apply for all datasets
 Tokenization and cleaning codes will be provided very soon
 
-EU legislation dataset could be download from [Chalkidis et al., 2019](https://github.com/iliaschalkidis/lmtc-eurlex57k)
+EU legislation dataset could be download from [Chalkidis et al. (2019)](https://github.com/iliaschalkidis/lmtc-eurlex57k)
 but the codes for running the experiments of EU legislation dataset are developed based on their original codes, so not included here.
 
 Graph data will be uploaded to Google Drive with open access in order to repeat the experimental results. Link will be provides here very soon. The python scripts for generating graph data has been included in the source codes.
