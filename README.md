@@ -20,7 +20,7 @@ Other encoders for conventional text classification task are mentioned in [Neura
 ## Dataset
 
 Due to the limit access to MIMIC dataset, you need to follow the instruction on the [web page](https://mimic.physionet.org/gettingstarted/access/) to apply for all datasets
-Tokenization and cleaning codes will be provided very soon
+Tokenization and cleaning codes will be provided very soon.
 
 EU legislation dataset could be download from [Chalkidis et al. (2019)](https://github.com/iliaschalkidis/lmtc-eurlex57k)
 but the codes for running the experiments of EU legislation dataset are developed based on their original codes, so not included here.
@@ -29,7 +29,7 @@ Graph data will be uploaded to Google Drive with open access in order to repeat 
 
 ## Config files
 
-For quickly repeat our experiments results, the config files will also be available soon from this repository.
+For quickly repeat our experiments results, the config files will also be available in the future.
 
 To simply run the codes, you should 
 
