@@ -37,11 +37,11 @@ cd NeuralNLP-NeuralClassifier-KAMG
 python train.py conf/config.py
 ```
 
-which is same as [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier)
+which is same as [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier).
 
 ## Acknowledgement
 
-Our codes are based on [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier)
+Our codes are based on [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier), and
 we have modified following files which will be different the from original.
 
 * model/rnn.py                           (update)
