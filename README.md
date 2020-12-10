@@ -2,6 +2,8 @@
 
 Code repository for EMNLP 2020 proceedings paper [Multi-label Few/Zero-shot Learning with Knowledge Aggregated from Multiple Label Graphs](https://www.aclweb.org/anthology/2020.emnlp-main.235/).
 
+![KAMG](readme/kamg.pdf)
+
 
 ## Introduction 
 
