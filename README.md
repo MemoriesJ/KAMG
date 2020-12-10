@@ -21,7 +21,7 @@ Other encoders for conventional text classification task are mentioned in [Neura
 
 ## Dataset
 
-Due to the limit access to MIMIC dataset, you need to follow the instruction on the [web page](https://mimic.physionet.org/gettingstarted/access/) to apply for all datasets
+Due to the policy of accessing the MIMIC dataset, you need to follow the instruction on the [web page](https://mimic.physionet.org/gettingstarted/access/) to apply for all datasets
 Tokenization and cleaning codes will be provided very soon.
 
 EU legislation dataset could be download from [Chalkidis et al. (2019)](https://github.com/iliaschalkidis/lmtc-eurlex57k)
