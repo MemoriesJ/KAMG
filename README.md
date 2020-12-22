@@ -48,8 +48,8 @@ Our codes are based on [Neural classifier](https://github.com/Tencent/NeuralNLP-
 we have modified following files which will be different from the source.
 
 * model/rnn.py                           (update)
-* model/fusion.py                        (update)
-* model/graph_convolution.py             (update)
+* model/fusion.py                        (add)
+* model/graph_convolution.py             (add)
 * model/zlwacnn.py                       (add)
 * model/zlwarnn.py                       (add)
 * model/zsjlcnn.py                       (add)
