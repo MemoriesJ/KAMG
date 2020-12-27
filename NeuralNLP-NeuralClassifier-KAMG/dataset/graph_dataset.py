@@ -71,7 +71,7 @@ class GraphDataSet:
             raise NotImplementedError
 
     @staticmethod
-    def normalize(mx, method="inv"):
+    def normalize(mx, method="sys"):
         """same as Rethinking knowledge graph propagation for zero-shot learning
         https://github.com/cyvius96/DGP/blob/master/utils.py"""
 
