@@ -9,11 +9,11 @@ from model.graph_convolution import GraphConvolution
 from model.attention import LabelWiseAttention
 
 
-class ZLWACNN(Classifier):
+class ZAGCNN(Classifier):
 
     def __init__(self, dataset, config):
 
-        super(ZLWACNN, self).__init__(dataset, config)
+        super(ZAGCNN, self).__init__(dataset, config)
 
         self.conv = torch.nn.Conv1d(
             in_channels=config.embedding.dimension,

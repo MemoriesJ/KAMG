@@ -10,14 +10,14 @@ from model.rnn import RNN
 from model.attention import LabelWiseAttention
 
 
-class ZLWARNN(Classifier):
+class ZAGRNN(Classifier):
 
     def __init__(self, dataset, config):
 
         assert config.label_embedding.dimension == config.ZLWARNN.gcn_in_features, \
             "label embedding dimension should be same as gcn input feature dimension"
 
-        super(ZLWARNN, self).__init__(dataset, config)
+        super(ZAGRNN, self).__init__(dataset, config)
 
         self.rnn = RNN(
             config.embedding.dimension, config.ZLWARNN.hidden_dimension,
