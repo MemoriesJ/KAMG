@@ -39,8 +39,8 @@ from model.classification.transformer import Transformer
 from model.classification.dpcnn import DPCNN
 from model.classification.attentive_convolution import AttentiveConvNet
 from model.classification.region_embedding import RegionEmbedding
-from model.classification.zlwacnn import ZLWACNN
-from model.classification.zlwarnn import ZLWARNN
+from model.classification.zagcnn import ZAGCNN
+from model.classification.zagrnn import ZAGRNN
 from model.classification.zsjlcnn import ZSJLCNN
 from model.classification.zsjlrnn import ZSJLRNN
 from model.loss import ClassificationLoss
@@ -50,7 +50,7 @@ from util import ModeType
 
 ClassificationDataset, ClassificationCollator, FastTextCollator, ClassificationLoss, cEvaluator
 FastText, TextCNN, TextRNN, TextRCNN, DRNN, TextVDCNN, Transformer, DPCNN, AttentiveConvNet, RegionEmbedding
-ZLWACNN, ZLWARNN, ZSJLCNN, ZSJLRNN
+ZAGCNN, ZAGRNN, ZSJLCNN, ZSJLRNN
 
 
 def get_data_loader(dataset_name, collate_name, conf):
