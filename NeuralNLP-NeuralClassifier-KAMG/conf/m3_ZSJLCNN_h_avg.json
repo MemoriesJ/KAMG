@@ -8,8 +8,8 @@
   },
   "device": "cuda",
   "model_name": "ZAGCNN",
-  "checkpoint_dir": "checkpoint_dir/mimic3/ZSJLCNN_h_avg",
-  "model_dir": "trained_model_dir/mimic3/ZSJLCNN_h_avg",
+  "checkpoint_dir": "checkpoint_dir/mimic3/ZAGCNN_h_avg",
+  "model_dir": "trained_model_dir/mimic3/ZAGCNN_h_avg",
   "data": {
     "train_json_files": [
       "data/mimic3_train.json"
@@ -23,7 +23,7 @@
     "generate_dict_using_json_files": true,
     "generate_dict_using_all_json_files": true,
     "generate_dict_using_pretrained_embedding": false,
-    "dict_dir": "dict_mimic3/ZSJLCNN_h_avg",
+    "dict_dir": "dict_mimic3/ZAGCNN_h_avg",
     "num_worker": 4,
     "label_token_file": "data/mimic_label_token.json",
     "generate_label_group": true,
@@ -81,12 +81,12 @@
   "eval": {
     "text_file": "data/mimic3_test.json",
     "threshold": 0.5,
-    "dir": "eval_dir/mimic3/ZSJLCNN_h_avg",
+    "dir": "eval_dir/mimic3/ZAGCNN_h_avg",
     "batch_size": 64,
     "is_flat": true,
     "top_k": 10,
-    "model_dir": "checkpoint_dir/mimic3/h_avg/ZSJLCNN_best",
-    "debug_file_name": "mimic3_ZSJLCNN_h_avg_probs.txt",
+    "model_dir": "checkpoint_dir/mimic3/h_avg/ZAGCNN_best",
+    "debug_file_name": "mimic3_ZAGCNN_h_avg_probs.txt",
     "instance_remove": false
   },
   "embedding": {
@@ -137,7 +137,7 @@
   },
   "log": {
     "logger_file_dir": "log_dir/mimic3",
-    "logger_file": "log_test_ZSJLCNN_h_avg_ZSJLCNN",
+    "logger_file": "log_test_ZAGCNN_h_avg",
     "log_level": "warn"
   }
 }
