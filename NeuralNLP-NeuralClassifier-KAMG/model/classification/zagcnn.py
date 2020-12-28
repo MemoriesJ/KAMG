@@ -17,41 +17,41 @@ class ZAGCNN(Classifier):
 
         self.conv = torch.nn.Conv1d(
             in_channels=config.embedding.dimension,
-            out_channels=config.ZLWACNN.num_kernels,
-            kernel_size=config.ZLWACNN.kernel_size,
-            padding=int(config.ZLWACNN.kernel_size // 2))
+            out_channels=config.ZAGCNN.num_kernels,
+            kernel_size=config.ZAGCNN.kernel_size,
+            padding=int(config.ZAGCNN.kernel_size // 2))
 
         self.label_wise_attention = LabelWiseAttention(
-            feat_dim=config.ZLWACNN.num_kernels,
+            feat_dim=config.ZAGCNN.num_kernels,
             label_emb_dim=config.label_embedding.dimension,
-            store_attention_score=config.ZLWACNN.store_attention_score)
+            store_attention_score=config.ZAGCNN.store_attention_score)
 
-        if config.ZLWACNN.use_gcn:
+        if config.ZAGCNN.use_gcn:
 
-            assert config.label_embedding.dimension == config.ZLWACNN.gcn_in_features, \
+            assert config.label_embedding.dimension == config.ZAGCNN.gcn_in_features, \
                 "label embedding dimension should be same as gcn input feature dimension"
 
             self.gcn = torch.nn.ModuleList([
                 GraphConvolution(
-                    in_features=config.ZLWACNN.gcn_in_features,
-                    out_features=config.ZLWACNN.gcn_hidden_features,
+                    in_features=config.ZAGCNN.gcn_in_features,
+                    out_features=config.ZAGCNN.gcn_hidden_features,
                     bias=True,
                     act=torch.relu_,
                     featureless=False,
-                    dropout=config.ZLWACNN.gcn_dropout),
+                    dropout=config.ZAGCNN.gcn_dropout),
                 GraphConvolution(
-                    in_features=config.ZLWACNN.gcn_hidden_features,
-                    out_features=config.ZLWACNN.gcn_out_features,
+                    in_features=config.ZAGCNN.gcn_hidden_features,
+                    out_features=config.ZAGCNN.gcn_out_features,
                     bias=True,
                     act=torch.relu_,
                     featureless=False,
-                    dropout=config.ZLWACNN.gcn_dropout)
+                    dropout=config.ZAGCNN.gcn_dropout)
             ])
 
             self.doc_out_transform = torch.nn.Sequential(
                 torch.nn.Linear(
-                    in_features=config.ZLWACNN.num_kernels,
-                    out_features=config.ZLWACNN.gcn_in_features + config.ZLWACNN.gcn_out_features
+                    in_features=config.ZAGCNN.num_kernels,
+                    out_features=config.ZAGCNN.gcn_in_features + config.ZAGCNN.gcn_out_features
                 ),
                 torch.nn.ReLU()
             )
@@ -61,7 +61,7 @@ class ZAGCNN(Classifier):
         params.append({'params': self.token_embedding.parameters()})
         params.append({'params': self.conv.parameters()})
         params.append({'params': self.label_wise_attention.parameters()})
-        if self.config.ZLWACNN.use_gcn:
+        if self.config.ZAGCNN.use_gcn:
             params.append({'params': self.gcn.parameters()})
             params.append({'params': self.doc_out_transform.parameters()})
         return params
@@ -89,7 +89,7 @@ class ZAGCNN(Classifier):
             batch[cDataset.DOC_LABEL_ID].to(self.config.device))
         attentive_doc_embedding = self.label_wise_attention(doc_embedding, label_repr)
 
-        if self.config.ZLWACNN.use_gcn:
+        if self.config.ZAGCNN.use_gcn:
             label_repr_gcn = label_repr
             for gcn_layer in self.gcn:
                 label_repr_gcn = gcn_layer(label_repr_gcn, batch[cDataset.DOC_LABEL_RELATION].to(self.config.device))
