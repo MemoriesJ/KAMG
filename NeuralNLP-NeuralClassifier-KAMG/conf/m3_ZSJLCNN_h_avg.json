@@ -7,7 +7,7 @@
     "zsl": true
   },
   "device": "cuda",
-  "model_name": "ZSJLCNN",
+  "model_name": "ZAGCNN",
   "checkpoint_dir": "checkpoint_dir/mimic3/ZSJLCNN_h_avg",
   "model_dir": "trained_model_dir/mimic3/ZSJLCNN_h_avg",
   "data": {
