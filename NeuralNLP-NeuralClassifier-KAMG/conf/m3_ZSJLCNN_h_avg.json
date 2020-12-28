@@ -119,10 +119,11 @@
     "adadelta_decay_rate": 0.95,
     "adadelta_epsilon": 1e-08
   },
-  "ZSJLCNN": {
+  "ZAGCNN": {
     "num_kernels": 200,
     "kernel_size": 10,
     "store_attention_score": false,
+    "use_gcn": true,
     "gcn_in_features": 200,
     "gcn_hidden_features": 200,
     "gcn_out_features": 200,
