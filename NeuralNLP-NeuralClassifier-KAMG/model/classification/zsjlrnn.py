@@ -57,7 +57,8 @@ class ZSJLRNN(Classifier):
         if config.fusion.fusion_type == FusionType.CONCATENATION:
             out_tmp = config.ZSJLRNN.gcn_in_features + config.fusion.out_features
         elif config.fusion.fusion_type == FusionType.ATTACH:
-            out_tmp = config.ZSJLRNN.gcn_in_features + config.ZSJLRNN.gcn_out_features * 2
+            out_tmp = config.ZSJLRNN.gcn_in_features + \
+                      config.ZSJLRNN.gcn_out_features * len(config.data.label_relation_files)
         else:
             raise NotImplementedError
         self.doc_out_transform = torch.nn.Sequential(
