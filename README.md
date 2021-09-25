@@ -39,7 +39,9 @@ After converting into txt file then put it into the dir<br />
 ```
 The python scripts for generating graph data has been included in the source codes. You may adjust some hyper-parameter for generating your own one.
 
-train-dev-test split follows [Mullenbach et al. (2018)](https://github.com/jamesmullenbach/caml-mimic), text further processed by the script provided in NeuralNLP-NeuralClassifier-KAMG/dataset/data_preprocessor.py,
+train-dev-test split follows [Mullenbach et al. (2018)](https://github.com/jamesmullenbach/caml-mimic), 
+you may use their notebook files for generating train-dev-test split.
+Texts further processed by the script provided in NeuralNLP-NeuralClassifier-KAMG/dataset/data_preprocessor.py,
 then convert the data into NeuralClassifier required format.
 
 
