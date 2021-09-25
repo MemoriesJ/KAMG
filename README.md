@@ -27,7 +27,21 @@ Tokenization and other data cleaning codes will be provided very soon.
 EU legislation dataset could be download from [Chalkidis et al. (2019)](https://github.com/iliaschalkidis/lmtc-eurlex57k)
 but the codes for running the experiments of EU legislation dataset are developed based on their original codes, so not included here.
 
-Graph data will be uploaded to Google Drive with open access in order to repeat the experimental results. The Google Drive link will be given here very soon. The python scripts for generating graph data has been included in the source codes.
+Graph data could be downloaded via the link https://drive.google.com/drive/folders/1tEPUkrZODCCexVwAi29FLkrELGFRkHfp?usp=sharing
+
+Put the data folder under NeuralNLP-NeuralClassifier-KAMG/
+
+Download the pretrained word vector file [Zhang et al. (2019), Chen et al. (2019)](https://github.com/ncbi-nlp/BioSentVec) <br /> 
+i.e., wget https://ftp.ncbi.nlm.nih.gov/pub/lu/Suppl/BioSentVec/BioWordVec_PubMed_MIMICIII_d200.vec.bin <br />
+After converting into txt file then put it into the dir<br />
+```
+    NeuralNLP-NeuralClassifier-KAMG/data/biowv.200d.txt
+```
+The python scripts for generating graph data has been included in the source codes. You may adjust some hyper-parameter for generating your own one.
+
+train-dev-test split follows [Mullenbach et al. (2018)](https://github.com/jamesmullenbach/caml-mimic), text further processed by the script provided in NeuralNLP-NeuralClassifier-KAMG/dataset/data_preprocessor.py,
+then convert the data into NeuralClassifier required format.
+
 
 ## Config files
 
@@ -37,7 +51,7 @@ To simply run the codes, you should
 
 ```
 cd NeuralNLP-NeuralClassifier-KAMG
-python train.py conf/config.py
+python train.py conf/m3_ZSJLCNN_hsc_avg.json
 ```
 
 which is same as [Neural classifier](https://github.com/Tencent/NeuralNLP-NeuralClassifier).
